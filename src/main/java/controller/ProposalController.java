@@ -16,8 +16,9 @@ public class ProposalController {
 
     private final Logger LOG = LoggerFactory.getLogger(ProposalController.class);
 
-    @Inject
-    JsonWebToken jsonWebToken;
+//    @Inject
+//    JsonWebToken jsonWebToken;
+
     @Inject
     ProposalService proposalService;
 
