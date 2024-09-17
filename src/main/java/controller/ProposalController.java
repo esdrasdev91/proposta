@@ -6,6 +6,7 @@ import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
+import org.eclipse.microprofile.jwt.JsonWebToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import service.ProposalService;
@@ -16,8 +17,8 @@ public class ProposalController {
 
     private final Logger LOG = LoggerFactory.getLogger(ProposalController.class);
 
-//    @Inject
-//    JsonWebToken jsonWebToken;
+    @Inject
+    JsonWebToken jsonWebToken;
 
     @Inject
     ProposalService proposalService;
