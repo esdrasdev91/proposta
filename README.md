@@ -22,6 +22,9 @@ The application can be packaged using:
 ./mvnw package
 ```
 
+
+![Arquitetura-projeto-Microsserviços](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjp0kc7mCs6pgnh4hPUSd4MHyCzJYBUTYLDw1Mz3oN2ENdWMc6a_RcSlRK94ar_r9jigsJ7jN2IcvKFT8oeEF7ngf-Atauz_tok_5ogwSjt4wTVLUlQbUmyxOStpnH0NZ6VPkw0BFmx5CQS_IzIi4Z6nxf7R5uvfGehN6qVrqFLLjbjGA/s1600/ArquiteturaCurso.jpg)
+
 It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
 Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
 
