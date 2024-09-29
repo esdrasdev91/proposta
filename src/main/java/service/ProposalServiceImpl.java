@@ -13,6 +13,7 @@ import repository.ProposalRepository;
 import java.util.Date;
 
 @ApplicationScoped
+@Traced
 public class ProposalServiceImpl implements ProposalService {
 
     @Inject
