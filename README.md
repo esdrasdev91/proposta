@@ -61,3 +61,30 @@ If you want to learn more about building native executables, please consult <htt
 - REST Jackson ([guide](https://quarkus.io/guides/rest#json-serialisation)): Jackson serialization support for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it
 - Hibernate ORM with Panache ([guide](https://quarkus.io/guides/hibernate-orm-panache)): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
 - JDBC Driver - PostgreSQL ([guide](https://quarkus.io/guides/datasource)): Connect to the PostgreSQL database via JDBC
+
+
+## Execução OpenTelemetry tracing com Jaeger:
+
+Execução do Jaeger:
+Certifique-se de que o Jaeger está em execução. Se você não o tiver configurado ainda, pode usar o Docker para isso:
+
+bash
+Copiar código
+docker run -d --name jaeger \
+-e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
+-p 5775:5775/udp \
+-p 6831:6831/udp \
+-p 6832:6832/udp \
+-p 5778:5778 \
+-p 16686:16686 \
+-p 14268:14268 \
+-p 14250:14250 \
+-p 9411:9411 \
+jaegertracing/all-in-one:1.31
+
+### O Jaeger estará disponível em http://localhost:16686, onde você poderá visualizar os traces gerados pelo seu serviço.
+
+## Verificação no Jaeger:
+   Após iniciar o Jaeger e rodar a aplicação Quarkus, você pode acessar http://localhost:16686, pesquisar pelo serviço proposta e visualizar os traces das requisições.
+
+Com isso, o Jaeger estará configurado para monitorar a aplicação Quarkus utilizando OpenTelemetry.
